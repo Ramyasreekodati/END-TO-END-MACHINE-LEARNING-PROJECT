@@ -58,3 +58,16 @@ for filepath in list_of_files:
     else:
         logging.info(f"{filename} already exists")
 
+
+"""
+what is directory path ?
+A directory path refers to the location or folder where files are stored on your computer or in a system. 
+It shows the hierarchy of folders leading to a specific location.
+
+    Windows: C:\Users\radhakrishna\Documents\Projects
+
+what is file path ?
+A file path refers to the complete location of a specific file,
+which includes the directory path as well as the file name and its extension (e.g., .txt, .py, .jpg).
+    Windows: C:\Users\randhakrihna\Documents\Projects\file.txt
+"""
