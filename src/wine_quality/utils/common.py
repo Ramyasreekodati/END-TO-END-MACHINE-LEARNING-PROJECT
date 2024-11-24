@@ -26,7 +26,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """
     try:
         with open(path_to_yaml) as yaml_file: # opening and loading the yaml file
-            content = yaml.safe_load(yaml_file)# when you load the file it willl give in dictionary format
+            content = yaml.safe_load(yaml_file)# when you load the file it will give in dictionary format
             logger.info(f"yaml file: {path_to_yaml} loaded successfully") # to extract esaier we use config like dict.key we get value
             return ConfigBox(content) # converting into  config file
         

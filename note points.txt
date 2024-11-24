@@ -151,6 +151,157 @@ from scipy.stats import boxcox
 transformed_data, _ = boxcox(data)
 
 
+###Day 3 :
+1. Data ingestion component -->github --> Notebook
+2. Data validating
+3. Data Transformation
+
+
+
+
+from github you get the url so we are going to dowload the link.
+1. dowload this in in system with name artifile folder
+2. data_ingestion folder
+3. inside that we are downloding zip file
+4.wine.csv we unzipped the file here
+
+
+connection 
+src ---> wine_quality ---> utils ---> common.py  {yaml file read,ceate directory}
+research ---> 01. data ingestion                 {the data ingestion code and combining the path}
+config ---> config.YAML                          {entitys are taken here}
+params.YAML                                      {parameter}
+schema.YAML                                      {data types}
+constant                                         {path}
+
+
+data ingestion file
+      |
+DataIngestionConfig--->config (path entity)    # here path is created in artifiles
+      |
+ConfigurationManager---> constant (path yaml)
+                   |---> utils.common (read yaml, diectory)
+      |
+Data Ingestion ----> by using config we dowload and unzip the file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##############          config ---->>> config.yaml           ###########################
+
+
+                >>>> Data Ingestion >>>>  
+                        artifacts  
+                            |  
+                      data ingestion  
+
+* Loading the raw data from the source  
+* Unzipping the data and organizing it into a structured format  
+* Storing the ingested data for further processing  
+
+                >>>> Data Validation >>>>  
+                        artifacts  
+                            |  
+                      data validation  
+
+* Ensuring data quality by checking for missing, inconsistent, or duplicate values  
+* Validating schema, file structure, and data types  
+* Generating reports or logs for validation results  
+
+                >>>> Data Transformation >>>>  
+                        artifacts  
+                            |  
+                      data transformation  
+
+* Cleaning the data by handling missing values, outliers, or irrelevant data  
+* Encoding categorical variables, normalizing/standardizing data  
+* Creating new features or engineering additional insights  
+
+                >>>> Data Trainer >>>>  
+                        artifacts  
+                            |  
+                      data trainer  
+
+* Splitting the dataset into training and testing datasets  
+* Selecting and training the appropriate machine learning models  
+* Hyperparameter tuning to optimize model performance  
+
+                >>>> Data Evaluation >>>>  
+                        artifacts  
+                            |  
+                      data evaluation  
+
+* Evaluating the trained model using metrics such as accuracy, precision, recall, F1-score, etc.  
+* Generating performance reports and comparing models  
+* Finalizing the best-performing model for deployment or further use  
+
+
+* Data Ingestion  
+
+* Data Validation  
+* Data Transformation  
+* Data Trainer  
+* Data Evaluation  
+
+
+#######################  schema.yaml  ###################################
+
+
+schema we should write the data type of attributes
+
+###################### params.yaml ########################################
+ paramas.yaml should not be empty while runnig the code it thoughts the error
+
+
+
+################### constant ####################################
+here we don't change the value 
+so here we are adding  path 
+
+
+
+
+#what is the meant by Data Classes
+
+in Python 3.7 via the dataclasses module. It simplifies the creation and 
+management of classes that are primarily used to store data. 
+By using the @dataclass decorator, you avoid writing boilerplate code like 
+__init__, __repr__, and __eq__ methods manually.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
