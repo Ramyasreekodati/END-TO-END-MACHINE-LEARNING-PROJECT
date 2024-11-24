@@ -175,7 +175,7 @@ schema.YAML                                      {data types}
 constant                                         {path}
 
 
-data ingestion file
+research...data ingestion file..........(**5**)
       |
 DataIngestionConfig--->config (path entity)    # here path is created in artifiles
       |
@@ -186,8 +186,19 @@ Data Ingestion ----> by using config we dowload and unzip the file
 
 
 
+MODULAR CODDING
 
-
+ofter entering the process in data ingestion file 
+ **********COPY PASTE*************
+  wine_quality
+        |
+  entity.config_entity
+        |
+  config.configuration
+        |
+  component.data ingestion(**5**)
+        |
+pipline .stage_01_data_ingestion(**5**)
 
 
 
