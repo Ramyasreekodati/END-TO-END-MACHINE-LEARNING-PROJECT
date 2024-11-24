@@ -58,26 +58,101 @@ Created a local project folder on the system.
 # elastic net sklearn
 
 
+###Logging
+Logging is a method to track events in your application during execution.
 
-Logging
-today i have done logging where 
-i have wirted code and connect the file dir and sys std output
-it stored at logs
-so here i created logs with code
-manually i have create logging with __init__.py file in that it created __pycache__ file
-i checked the process in main.py file
+Purpose: Helps monitor, debug, and maintain the codebase by storing important information about execution.
 
-example:
-[%(asctime)s: %(levelname)s: %(module)s: %(message)s]
+How It Works:
 
-[2024-11-24 05:43:44,918: INFO: main: this is y logger]
+Configured using the logging module in Python.
+Logs can include timestamps, log levels (INFO, DEBUG, ERROR), the module name, and custom messages.
+
+Example log format:
+ruby
+
+                [%(asctime)s: %(levelname)s: %(module)s: %(message)s]
+
+Example output:
+yaml
+                [2024-11-24 05:43:44,918: INFO: main: This is my logger]
+Can redirect logs to files or console for better tracking.
+Logs are configured in an __init__.py file or main module.
+
+Example:
+python
+
+                from src.wine_quality.logging import logger
+                logger.info("This is a test log")
+Benefits:
+
+>>>Tracks the execution process with clear timestamps and messages.
+>>>Reduces redundancy by centralizing log operations.
+>>>Simplifies debugging.
 
 
-with hele of logging we don't need write the entier connent
-from src.wine_quality.logging import logger
-from wine_quality import logger
+###YAML Files
 
-both will work
-* it tracks the code
-* it shows time level module message
-* it hepls to short the import operations
+YAML (Yet Another Markup Language) is used to define configurations in a readable format.
+
+Usage in Python:
+The pyyaml package is used to read and parse YAML files.
+Simplifies configuration handling in projects.
+
+Why YAML for Logging?
+Keeps logging and configurations organized and avoids repetitive code.
+
+###Config Module
+
+A configuration module simplifies extracting values.
+Instead of using traditional dictionary indexing (dict["key"]), configurations can be accessed as attributes (dict.key).
+This approach reduces errors and makes the code cleaner.
+  
+Why Use the ensure_annotation Decorator?
+
+Ensures that the functions return expected outputs by validating inputs and outputs.
+Helps maintain consistency in utility code.
+
+
+###Exceptions
+
+Exceptions handle runtime errors gracefully, ensuring the program doesnot crash unexpectedly.
+
+Why Use Exceptions?
+
+Provides clear error messages.
+Helps isolate and fix issues without breaking the entire workflow.
+Custom Exceptions:
+
+User-defined exceptions tailored to specific error cases in your application.
+Example: Using BoxException to capture and log specific errors.
+
+### workflow
+A workflow is a sequence of steps or processes designed to complete a specific task in a project.
+
+Purpose: Provides structure to complex tasks, ensuring consistency and efficiency.
+Why It’s Needed:
+Defines a clear sequence for project execution.
+Helps teams collaborate effectively.
+Automates repetitive tasks.
+Example:
+In a machine learning project, workflows might include:
+Data collection → Data cleaning → Feature engineering → Model training → Evaluation.
+
+
+###Reduce Skewness?
+Skewness can be reduced by applying transformations to the data:
+
+Techniques:
+Log Transformation: np.log1p(data)
+Square Root Transformation: np.sqrt(data)
+Box-Cox Transformation (only for positive data):
+from scipy.stats import boxcox
+transformed_data, _ = boxcox(data)
+
+
+
+
+
+
+
