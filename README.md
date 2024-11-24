@@ -35,7 +35,7 @@ End to end ml Project Implementation
 8. Update the main.py
 9. Update the app.py
 
-Clone the repository
+#Clone the repository
 ''''
 bash
 
@@ -62,3 +62,4 @@ python app.py
 ```
 
 get config --global user.name "Ramyasreekodati"
+get config --global user.email "ramyasreekodati@gmail.com"

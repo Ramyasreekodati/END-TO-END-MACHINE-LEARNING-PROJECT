@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO,format="[%(asctime)s]:%(message)s:" )
 #%(asctime)s: shows the  timestamp (date and time) when the log message was created.
 #%(message)s:  shows the actual log message that you want to display.
 
-project_name="wine quality"
+project_name="wine_quality"
 
 list_of_files = [
     f"src/{project_name}/__init__.py",  # Main project initialization file

@@ -1,0 +1,83 @@
+# what is mean by setup.pu ?
+It is a blueprint .It reduces the error.It uses tools like "requriments.txt" or "pyproject.toml" allowa consistent installation of dependencies.
+
+Folders: Organize your workbooks
+         (e.g., data, code, tests).
+Files: Keep important notes 
+        (e.g., configuration, scripts).
+Tools: Have your pens ready 
+        (e.g., software, libraries, virtual environments).
+
+
+
+##Day -1 :
+1.project Introduction
+2. Github Repo setup
+3. Project Template
+4. requriments Installation (python Packages)
+ 
+#Tools Installed:
+
+Conda: For environment management.
+Git Bash: For version control operations.
+Rustinit: To handle dependencies required for some Python libraries.
+Pywinpty: To ensure compatibility with Windows environments.
+Process Followed:
+
+#Environment and Tool Integration
+
+Configured the environment path.
+Linked Conda and Git Bash with Visual Studio Code.
+#Repository Management
+
+Created a new GitHub repository.
+Created a local project folder on the system.
+
+#Cloned the repository using the following steps:
+    git clone <repository_url>
+    git init
+    git add .
+    git commit -m "Initial commit"
+    git branch
+    git push origin main
+
+
+## Day 2:
+1. Notebook Experiment
+2. Project utils --> Logging, exceptions, utils module,
+3. project workflows
+
+
+# what is mean by Logging?
+# what is mean by exceptions
+# what is mean by utils module
+# what is mean by workflows , why we should need it .
+# how to log transform sklearn
+# how to reduse skuwness
+# how to create pr problem
+# elastic net sklearn
+
+
+
+Logging
+today i have done logging where 
+i have wirted code and connect the file dir and sys std output
+it stored at logs
+so here i created logs with code
+manually i have create logging with __init__.py file in that it created __pycache__ file
+i checked the process in main.py file
+
+example:
+[%(asctime)s: %(levelname)s: %(module)s: %(message)s]
+
+[2024-11-24 05:43:44,918: INFO: main: this is y logger]
+
+
+with hele of logging we don't need write the entier connent
+from src.wine_quality.logging import logger
+from wine_quality import logger
+
+both will work
+* it tracks the code
+* it shows time level module message
+* it hepls to short the import operations
