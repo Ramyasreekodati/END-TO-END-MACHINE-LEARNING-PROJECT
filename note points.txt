@@ -248,3 +248,22 @@ research ----> 01.data_ingestion
       └── pipeline.stage_01_data_ingestion 
 
 
+# Data Classes in Python
+Introduced in Python 3.7 via the dataclasses module.
+Simplifies creation and management of classes used for data storage.
+By using @dataclass, you avoid boilerplate code like:
+__init__
+__repr__
+__eq__
+
+
+
+## Day 4
+1. Model Trainer component
+2. Model Evaluation component
+3. Prediction pipeline
+4. User APP ---> Flask
+
+
+
+joblib or we can use pickle
