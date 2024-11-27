@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <!-- Link the external stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body background="{{ url_for('static', filename='image.jpg') }}">
-    <!-- Masthead Section -->
+<body class="signup-page">
     <div class="masthead">
         <h1>Welcome to Our Platform</h1>
         <p class="subheading">Create your account and start your journey today!</p>
     </div>
+
+    <!-- Signup Image Section -->
+    <div class="signup-image"></div> <!-- This will display the image -->
 
     <!-- Main Form Section -->
     <div class="container">
@@ -37,9 +38,7 @@
         </form>
         <p>Already have an account? <a href="/signin">Sign in here</a></p>
     </div>
-    <script src="{{ url_for('static', filename='js/validate.js') }}"></script>
 
+    <script src="{{ url_for('static', filename='js/validate.js') }}"></script>
 </body>
 </html>
-
-

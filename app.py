@@ -1,5 +1,3 @@
-
-
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -9,7 +7,8 @@ from src.wine_quality.pipeline.prediction import PredictionPipeline  # Ensure th
 
 app = Flask(__name__, static_folder='project_folder/static', template_folder='project_folder/templates')
 
-app.secret_key = os.urandom(24)  # Secret key for session handling
+# Use a fixed secret key for development; replace with a secure key in production
+app.secret_key = "supersecretkey"  # Avoid using `os.urandom` for consistent sessions during testing
 
 # Dummy user data (replace with a database in production)
 users = {
@@ -24,11 +23,14 @@ def signup():
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
-        # Process the data (e.g., save to a database)
-        return redirect('/signin')  # Redirect to sign-in page after successful signup
-    return render_template('signup.html')
+        
+        # Add logic to save user to database or in-memory dictionary
+        if email in users:
+            return jsonify({"error": "User already exists"}), 400
 
-    
+        users[email] = generate_password_hash(password)
+        return redirect('/signin')
+    return render_template('signup.html')
 
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
@@ -68,7 +70,7 @@ def predict():
             "pH": float(request.form["pH"]),
             "sulphates": float(request.form["sulphates"]),
             "alcohol": float(request.form["alcohol"]),
-            "Id": 0  # Default value for "Id" if required during training
+            "Id": 0
         }
 
         data_df = pd.DataFrame([features])
@@ -97,5 +99,4 @@ def logout():
     return redirect(url_for("signin"))
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=2025, debug=True)
-
+    app.run(host="0.0.0.0", port=2003, debug=True)
