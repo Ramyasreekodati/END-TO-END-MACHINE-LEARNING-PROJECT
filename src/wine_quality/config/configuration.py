@@ -1,6 +1,10 @@
 from wine_quality.constants import *
-from wine_quality.utils.common import read_yaml, create_directories
-from wine_quality.entity.config_entity import (DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig,ModelEvaluationConfig)
+from wine_quality.utils.common import read_yaml, create_directories 
+from wine_quality.entity.config_entity import (DataIngestionConfig,
+                                               DataValidationConfig,
+                                               DataTransformationConfig,
+                                               ModelTrainerConfig,
+                                               ModelEvaluationConfig)
 
 
 class ConfigurationManager:
@@ -88,7 +92,7 @@ class ConfigurationManager:
     def get_model_evaluation_config(self) -> ModelEvaluationConfig:
         config = self.config.model_evaluation
         params = self.params.ElasticNet
-        schema =  self.schema.TARGET_COLUMN
+        schema = self.schema.TARGET_COLUMN
 
         create_directories([config.root_dir])
 
