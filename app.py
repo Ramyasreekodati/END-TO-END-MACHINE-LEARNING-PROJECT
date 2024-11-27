@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from src.wine_quality.pipeline.prediction import PredictionPipeline  # Ensure this exists
 
-app = Flask(__name__, static_folder='project_folder/static', template_folder='templates')
+app = Flask(__name__, static_folder='project_folder/static', template_folder='project_folder/templates')
 
 app.secret_key = os.urandom(24)  # Secret key for session handling
 
@@ -18,20 +18,17 @@ users = {
 
 # ----------------------------- ROUTES ---------------------------------
 
-@app.route("/signup", methods=["GET", "POST"])
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    if request.method == "POST":
-        name = request.form["name"]
-        email = request.form["email"]
-        password = request.form["password"]
-        
-        if email in users:
-            return jsonify({"error": "User already exists"}), 400
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        password = request.form['password']
+        # Process the data (e.g., save to a database)
+        return redirect('/signin')  # Redirect to sign-in page after successful signup
+    return render_template('signup.html')
 
-        users[email] = generate_password_hash(password)
-        return redirect(url_for("signin"))
     
-    return render_template("signup.html")
 
 @app.route("/signin", methods=["GET", "POST"])
 def signin():

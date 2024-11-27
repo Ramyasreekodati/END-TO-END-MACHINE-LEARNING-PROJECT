@@ -13,9 +13,10 @@ body {
 }
 
 .masthead {
-    background-image: url('F:\end to end ml project\END-TO-END-MACHINE-LEARNING-PROJECT\project_folder\static\image.jpg');
+    background-image: url('/static/image.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat; /* Prevents the background from repeating */
     padding: 50px 0;
     color: white;
     text-align: center;

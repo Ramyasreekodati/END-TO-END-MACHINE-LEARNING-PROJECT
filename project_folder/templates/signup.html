@@ -4,28 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <!-- Link the external stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
-    <div class="signup-container">
-        <h1>Create an Account</h1>
+<body background="{{ url_for('static', filename='image.jpg') }}">
+    <!-- Masthead Section -->
+    <div class="masthead">
+        <h1>Welcome to Our Platform</h1>
+        <p class="subheading">Create your account and start your journey today!</p>
+    </div>
+
+    <!-- Main Form Section -->
+    <div class="container">
+        <h1>Sign Up</h1>
         <form action="/signup" method="POST">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required><br>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
 
             <button type="submit">Sign Up</button>
         </form>
         <p>Already have an account? <a href="/signin">Sign in here</a></p>
     </div>
     <script src="{{ url_for('static', filename='js/validate.js') }}"></script>
+
 </body>
 </html>
-
 
 

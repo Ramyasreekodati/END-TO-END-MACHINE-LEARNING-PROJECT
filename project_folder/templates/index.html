@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <header class="masthead" style="background-image: url('{{ url_for('static', filename='image.jpg') }}');">
+    <header class="masthead" style="background-image: url('/static/image.jpg');">
+
+
         <div class="container">
             <h1>Wine Quality Prediction</h1>
             <span class="subheading">A Wine Quality Checking Web App</span>
@@ -60,7 +62,8 @@
             <div class="form-group"><label for="alcohol">Alcohol:</label>
                 <input type="number" step="0.01" id="alcohol" name="alcohol" required>
             </div>
-            button type="submit">Predict</button>
+            <button type="submit">Predict</button>
+
         </form>
     </div>
 
