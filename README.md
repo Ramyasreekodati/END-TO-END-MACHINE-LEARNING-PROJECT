@@ -60,6 +60,10 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
+'''bash
+now open up your local host 0.0.0.0 : 2003
+'''
+
 
 get config --global user.name "Ramyasreekodati"
 get config --global user.email "ramyasreekodati@gmail.com"

@@ -8,7 +8,7 @@ from src.wine_quality.pipeline.prediction import PredictionPipeline  # Ensure th
 app = Flask(__name__, static_folder='project_folder/static', template_folder='project_folder/templates')
 
 # Use a fixed secret key for development; replace with a secure key in production
-app.secret_key = "supersecretkey"  # Avoid using `os.urandom` for consistent sessions during testing
+app.secret_key = 'your_secret_key'
 
 # Dummy user data (replace with a database in production)
 users = {
@@ -20,17 +20,24 @@ users = {
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        password = request.form['password']
-        
-        # Add logic to save user to database or in-memory dictionary
-        if email in users:
-            return jsonify({"error": "User already exists"}), 400
+        try:
+            name = request.form.get('name')
+            email = request.form.get('email')
+            password = request.form.get('password')
+            
+            if not name or not email or not password:
+                return jsonify({"error": "All fields are required"}), 400
 
-        users[email] = generate_password_hash(password)
-        return redirect('/signin')
+            if email in users:
+                return jsonify({"error": "User already exists"}), 400
+
+            users[email] = generate_password_hash(password)
+            return redirect('/signin')
+        except Exception as e:
+            print(f"Error during signup: {e}")
+            return jsonify({"error": "Internal Server Error"}), 500
     return render_template('signup.html')
+
 
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
