@@ -125,6 +125,62 @@ get config --global user.email "ramyasreekodati@gmail.com"
 │   │     ├── signup.html
 │   └── __init__.py  
 
+# Wine Quality Prediction Web App
+
+This project is an end-to-end machine learning application that predicts the quality of wine based on its chemical properties. The web application is built using **Flask** for the backend and HTML/CSS/JavaScript for the frontend.
+
+## Workflow
+
+1. **Sign Up Page**:
+   - Users can create a new account by providing their name, email, and password.
+   - Passwords must be at least 6 characters long.
+   - If the account already exists, an error is displayed.
+
+   
+![Signup Page](project_folder/static/web_images/singup_page.png)
+
+2. **Sign In Page**:
+   - Users log in with their email and password.
+   - On successful login, users are redirected to the testing page.
+   - If the credentials are incorrect, an error message is displayed.
+
+   ![Sign In Page](project_folder/static/web_images/singin_page.png)
+   ![Sign In Page](project_folder/static/web_images/singin_ofter_singup.png)
+
+3. **Testing Page**:
+   - Users input various chemical properties of the wine (e.g., acidity, pH, residual sugar, etc.).
+   - After filling out the form, users click the **Predict** button.
+
+   ![Testing Page](project_folder/static/web_images/testing_page.png)
+   ![Testing Page](project_folder/static/web_images/predicting_result.png)
+
+4. **Result Page**:
+   - After submitting the form on the testing page, the prediction result is displayed.
+   - The predicted wine quality is shown in a user-friendly format.
+
+   ![Result Page](project_folder/static/web_images/result_page.png)
+
+## Features
+
+- **User Authentication**: Secure user authentication with email and password.
+- **Dynamic Pages**: Form validation and real-time error messages implemented using JavaScript.
+- **Prediction Model**: Integrates a trained machine learning model for wine quality prediction.
+- **Responsive Design**: Ensures compatibility across devices.
+
+
+## Demo Video
+
+You can download and watch the demo video from the link below:
+
+[Download Demo Video](https://github.com/Ramyasreekodati/END-TO-END-MACHINE-LEARNING-PROJECT/blob/main/project_folder/static/web_images/Demo%20vedio.mp4)
+
+
+
+
+
+
+
+
 
 
 
