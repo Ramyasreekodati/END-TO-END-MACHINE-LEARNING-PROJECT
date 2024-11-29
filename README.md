@@ -78,18 +78,18 @@ get config --global user.email "ramyasreekodati@gmail.com"
 │   ├── 01_data_ingestion.py  
 │   ├── 02_data_validation.py   
 │   ├── 03_data_transformation.py   
-│   ├── 04_model_trainer.py        # Prototyping and experimentation scripts.  
+│   ├── 04_model_trainer.py         
 │   ├── 05_model_evaluation.py   
 ├── config  
-│   └── config.yaml                # Configuration settings for the project.  
+│   └── config.yaml                
 ├── src  
 │   ├── utils  
-│   │   └── common.py              # Utility functions for YAML parsing, directory creation, etc.  
+│   │   └── common.py              
 │   ├── entity  
-│   │   └── config_entity.py       # Data classes for configuration management.  
+│   │   └── config_entity.py       
 │   ├── components  
 │   │   ├── data_ingestion.py 
-│   │   ├── data_validation.py      # Logic for fetching and structuring raw data.  
+│   │   ├── data_validation.py       
 │   │   ├── data_transformation.py 
 │   │   ├── data_trainer.py 
 │   │   ├── data_evaluation.py 
@@ -100,31 +100,42 @@ get config --global user.email "ramyasreekodati@gmail.com"
 │   │   ├── stage_04_model_trainer.py 
 │   │   ├── stage_05_model_evaluation.py 
 │   └── constants  
-│       └── constants.py           # Centralized constants for the project.  
-├── params.yaml                    # Parameters for model training and evaluation.  
-├── schema.yaml                    # Schema for validating input data.  
-├── app.py                         # Flask application for user interaction.  
-├── artifacts                      # Directory for storing pipeline outputs.  
-├── logs                           # Directory for execution logs.  
-├── main.py                        # Entry point for orchestrating the pipeline.  
-├── requirements.txt               # Python dependencies.  
-├── setup.py                       # Script for installing the project as a package.  
-└── README.md                      # Overview and documentation for the project.  
-├── app.py                           # Main application file
+│       └── constants.py          
+├── params.yaml                      
+├── schema.yaml                    
+├── app.py                          
+├── artifacts                      
+├── logs                           
+├── main.py                         
+├── requirements.txt               
+├── setup.py                        
+└── README.md                        
+├── app.py                           
 ├── project_folder\
 │   ├── static\
 │   │    ├── css\
-│   │         └── style.css            # CSS styles
-│   │     ├── js\                      # (Optional) Add if JavaScript files are needed
+│   │         └── style.css            
+│   │     ├── js\                      
 │   │     └── images\
-│   │         └── image.jpg            # Place for images
-│   ├── templates\                   # HTML templates
+│   │         └── image.jpg            
+│   ├── templates\                  
 │   │     ├── index.html
 │   │     ├── result.html
 │   │     ├── signin.html
 │   │     ├── signup.html
 │   └── __init__.py  
 
+<<<<<<< HEAD
+=======
+
+## Technologies Used
+- Python
+- Flask (Backend)
+- HTML, CSS, JavaScript (Frontend)
+- scikit-learn (Machine Learning)
+- Bootstrap (Styling)
+
+>>>>>>> 9d0a4c85a6e390993b1a4db509f7f199d28b513c
 # Wine Quality Prediction Web App
 
 This project is an end-to-end machine learning application that predicts the quality of wine based on its chemical properties. The web application is built using **Flask** for the backend and HTML/CSS/JavaScript for the frontend.
@@ -173,6 +184,25 @@ This project is an end-to-end machine learning application that predicts the qua
 You can download and watch the demo video from the link below:
 
 [Download Demo Video](https://github.com/Ramyasreekodati/END-TO-END-MACHINE-LEARNING-PROJECT/blob/main/project_folder/static/web_images/Demo%20vedio.mp4)
+<<<<<<< HEAD
+=======
+
+
+## Contributing
+Contributions are welcome! Please feel free to submit a pull request or open an issue if you have sugge
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+
+
+
+
+
+
+
+>>>>>>> 9d0a4c85a6e390993b1a4db509f7f199d28b513c
 
 
 
