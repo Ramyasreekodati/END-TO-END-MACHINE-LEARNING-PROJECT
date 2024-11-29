@@ -78,18 +78,18 @@ get config --global user.email "ramyasreekodati@gmail.com"
 │   ├── 01_data_ingestion.py  
 │   ├── 02_data_validation.py   
 │   ├── 03_data_transformation.py   
-│   ├── 04_model_trainer.py        # Prototyping and experimentation scripts.  
+│   ├── 04_model_trainer.py         
 │   ├── 05_model_evaluation.py   
 ├── config  
-│   └── config.yaml                # Configuration settings for the project.  
+│   └── config.yaml                
 ├── src  
 │   ├── utils  
-│   │   └── common.py              # Utility functions for YAML parsing, directory creation, etc.  
+│   │   └── common.py              
 │   ├── entity  
-│   │   └── config_entity.py       # Data classes for configuration management.  
+│   │   └── config_entity.py       
 │   ├── components  
 │   │   ├── data_ingestion.py 
-│   │   ├── data_validation.py      # Logic for fetching and structuring raw data.  
+│   │   ├── data_validation.py       
 │   │   ├── data_transformation.py 
 │   │   ├── data_trainer.py 
 │   │   ├── data_evaluation.py 
@@ -100,25 +100,25 @@ get config --global user.email "ramyasreekodati@gmail.com"
 │   │   ├── stage_04_model_trainer.py 
 │   │   ├── stage_05_model_evaluation.py 
 │   └── constants  
-│       └── constants.py           # Centralized constants for the project.  
-├── params.yaml                    # Parameters for model training and evaluation.  
-├── schema.yaml                    # Schema for validating input data.  
-├── app.py                         # Flask application for user interaction.  
-├── artifacts                      # Directory for storing pipeline outputs.  
-├── logs                           # Directory for execution logs.  
-├── main.py                        # Entry point for orchestrating the pipeline.  
-├── requirements.txt               # Python dependencies.  
-├── setup.py                       # Script for installing the project as a package.  
-└── README.md                      # Overview and documentation for the project.  
-├── app.py                           # Main application file
+│       └── constants.py          
+├── params.yaml                      
+├── schema.yaml                    
+├── app.py                          
+├── artifacts                      
+├── logs                           
+├── main.py                         
+├── requirements.txt               
+├── setup.py                        
+└── README.md                        
+├── app.py                           
 ├── project_folder\
 │   ├── static\
 │   │    ├── css\
-│   │         └── style.css            # CSS styles
-│   │     ├── js\                      # (Optional) Add if JavaScript files are needed
+│   │         └── style.css            
+│   │     ├── js\                      
 │   │     └── images\
-│   │         └── image.jpg            # Place for images
-│   ├── templates\                   # HTML templates
+│   │         └── image.jpg            
+│   ├── templates\                  
 │   │     ├── index.html
 │   │     ├── result.html
 │   │     ├── signin.html
