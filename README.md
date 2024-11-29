@@ -25,8 +25,6 @@ End to end ml Project Implementation
 
 """
 
-
-
 #Clone the repository
 ''''
 bash

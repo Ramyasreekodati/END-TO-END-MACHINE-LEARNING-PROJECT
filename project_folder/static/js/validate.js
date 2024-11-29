@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
+    const signupPage = document.querySelector(".signup-page"); // Target the signup page container
 
+    // Set the background image dynamically on the signup page container
+    signupPage.style.backgroundImage = "url('/static/image02.jpg')";
+    signupPage.style.backgroundSize = "cover";  // Ensures the background covers the entire container
+    signupPage.style.backgroundPosition = "center";  // Centers the background image
+    signupPage.style.backgroundAttachment = "fixed";  // Optional: Adds parallax effect on scroll
+
+    // Form submission event listener
     form.addEventListener("submit", function (event) {
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
