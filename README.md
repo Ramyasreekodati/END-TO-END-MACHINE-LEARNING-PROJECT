@@ -125,8 +125,7 @@ get config --global user.email "ramyasreekodati@gmail.com"
 │   │     ├── signup.html
 │   └── __init__.py  
 
-<<<<<<< HEAD
-=======
+
 
 ## Technologies Used
 - Python
@@ -135,7 +134,6 @@ get config --global user.email "ramyasreekodati@gmail.com"
 - scikit-learn (Machine Learning)
 - Bootstrap (Styling)
 
->>>>>>> 9d0a4c85a6e390993b1a4db509f7f199d28b513c
 # Wine Quality Prediction Web App
 
 This project is an end-to-end machine learning application that predicts the quality of wine based on its chemical properties. The web application is built using **Flask** for the backend and HTML/CSS/JavaScript for the frontend.
@@ -184,8 +182,10 @@ This project is an end-to-end machine learning application that predicts the qua
 You can download and watch the demo video from the link below:
 
 [Download Demo Video](https://github.com/Ramyasreekodati/END-TO-END-MACHINE-LEARNING-PROJECT/blob/main/project_folder/static/web_images/Demo%20vedio.mp4)
-<<<<<<< HEAD
-=======
+
+
+### this is the web site like 
+>>>>>>>>> https://end-to-end-machine-learning-project-lc0h.onrender.com <<<<<<<<<<<<
 
 
 ## Contributing
@@ -200,9 +200,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 
 
-
-
->>>>>>> 9d0a4c85a6e390993b1a4db509f7f199d28b513c
 
 
 
