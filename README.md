@@ -185,8 +185,7 @@ You can download and watch the demo video from the link below:
 
 
 ### this is the web site like 
->>>>>>>>> https://end-to-end-machine-learning-project-lc0h.onrender.com <<<<<<<<<<<<
-
+[this is the web link].(https://end-to-end-machine-learning.onrender.com)
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a pull request or open an issue if you have sugge
